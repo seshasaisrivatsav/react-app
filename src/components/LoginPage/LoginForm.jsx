@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Panel, Form, FormGroup, FormControl, Button } from 'react-bootstrap';
 
 
@@ -20,17 +20,13 @@ const buttonStyle = {
   marginBottom: 0
 };
 
-class LoginForm extends Component {
-
-  handleFormSubmit(e) {
+const LoginForm = () => {
+  const handleFormSubmit = e => {
     e.preventDefault();
-
     console.log("FORM SUBMIT!");
-
   }
 
-  render() {
-    return (
+  return (
       <div style={divStyle}>
         <Panel style={panelStyle}>
           <Form horizontal className="LoginForm" id="loginForm">
@@ -41,15 +37,14 @@ class LoginForm extends Component {
               <FormControl type="password" placeholder="Password" />
             </FormGroup>
             <FormGroup style={buttonStyle} controlId="formSubmit">
-              <Button bsStyle="primary" type="submit" onClick={this.handleFormSubmit}>
+              <Button bsStyle="primary" type="submit" onClick={handleFormSubmit}>
                 Login
               </Button>
             </FormGroup>
           </Form>
         </Panel>
       </div>
-    )
-  }
-}
+  )
+};
 
 export default LoginForm;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route
@@ -7,25 +7,15 @@ import HomePage from './components/HomePage/HomePage';
 import LoginPage from './components/LoginPage/LoginPage';
 import './App.css';
 
-const Home = () => (
-  <HomePage />
-);
-
-const Login = () => (
-  <LoginPage />
-);
-
-class App extends Component {
-  render() {
-    return (
+const App = () => {
+  return (
       <Router>
         <div className="App">
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/" component={HomePage} />
+          <Route path="/login" component={LoginPage} />
         </div>
       </Router>
-    );
-  }
-}
+  );
+};
 
 export default App;
