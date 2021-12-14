@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   height: 100%;
   width: 100%;
 }
@@ -23,4 +22,12 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.make-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }

@@ -1,21 +1,17 @@
-import React  from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import './NavBar.css';
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import './navBar.css';
 
 const NavBar = () => {
+    const history = useHistory();
     return (
-        <Navbar>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    <a href="/">React-Bootstrap</a>
-                </Navbar.Brand>
-            </Navbar.Header>
-            <Nav>
-                <NavItem eventKey={1} href="/">Home</NavItem>
-                <NavItem eventKey={2} href="/login">Login</NavItem>
-            </Nav>
-        </Navbar>
+        <ul>
+            <li><a onClick={() => history.push('/dashboard')} href=''>Dashboard</a></li>
+            <li><a onClick={() => history.push('/incrementor')} href=''>Incrementor</a></li>
+            <li><a onClick={() => history.push('/register')} href=''>Register</a></li>
+            <li><a onClick={() => history.push('/login')} href=''>Login</a></li>
+        </ul>
     );
-}
+};
 
 export default NavBar;

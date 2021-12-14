@@ -1,7 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## React App
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Sample app to test some react learning.
+- Example of how to render rows and columns using react 
+- Has a movie app that lists near by playing movies.
+- React Routing
+
+<img src="https://user-images.githubusercontent.com/19309898/146079822-3c246a83-5859-4ca2-b062-7cc79b867bb8.png" height="500px"/>
+
+## Running the app
+```shell script
+source env.sh
+nvm use
+npm install
+npm start
+```
+
 
 ## Table of Contents
 
