@@ -18,26 +18,25 @@ const LoginPage = () => {
         e.preventDefault();
     }
 
-  return (
-      <div className="LoginPage">
-          <TabPane className='panelStyle divStyle'>
-              <Form horizontal className="LoginForm" id="loginForm">
-                  <FormGroup controlId="formEmail">
-                      <FormControl type="email" placeholder="Email Address" onChange={e => setUserName(e.target.value)}/>
-                  </FormGroup>
-                  <FormGroup controlId="formPassword">
-                      <FormControl type="password" placeholder="Password" id="formPassword" onChange={e => setPassword(e.target.value)}/>
-                  </FormGroup>
-                  <FormGroup style={{marginBottom: 0}} controlId="formSubmit">
-                      <Button bsStyle="primary" type="submit" onClick={handleFormSubmit}>
-                          Login
-                      </Button>
-                  </FormGroup>
-              </Form>
-          </TabPane>
-      </div>
-
-  );
+    return (
+        <div className="LoginPage">
+            <TabPane className='panelStyle divStyle'>
+                <Form horizontal className="LoginForm" id="loginForm">
+                    <FormGroup controlId="formEmail">
+                        <FormControl type="email" placeholder="Email Address" onChange={e => setUserName(e.target.value)}/>
+                    </FormGroup>
+                    <FormGroup controlId="formPassword">
+                        <FormControl type="password" placeholder="Password" id="formPassword" onChange={e => setPassword(e.target.value)}/>
+                    </FormGroup>
+                    <FormGroup style={{marginBottom: 0}} controlId="formSubmit">
+                        <Button bsStyle="primary" type="submit" onClick={handleFormSubmit}>
+                            Login
+                        </Button>
+                    </FormGroup>
+                </Form>
+            </TabPane>
+        </div>
+    );
 }
 
 export default LoginPage;

@@ -5,6 +5,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import Incrementor from "./components/Incrementor/Incrementor";
 import RegisterPage from "./components/RegisterPage/RegisterPage";
 import Dashboard from "./components/Dashboard/Dashboard";
+import Sandbox from "./components/Sandbox/Sandbox";
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/register" component={RegisterPage}/>
                 <Route path="/incrementor" component={Incrementor}/>
                 <Route path="/Dashboard" component={Dashboard} />
+                <Route path="/Sandbox" component={Sandbox} />
             </div>
         </BrowserRouter>
     );

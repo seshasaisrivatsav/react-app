@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Button, Placeholder, DropdownButton, Dropdown, Container, Row, Col } from 'react-bootstrap';
 import moviesApi from "../../api/movies";
 import './dashboard.css';
+import {createRows, array} from "../../api/deleteMe";
 
 const STATES = {
     LIST_VIEW: 'list',
@@ -51,6 +52,8 @@ const Dashboard = () => {
         );
     };
 
+    createRows(array, 3);
+
     const createRowMovies = () => {
         let rows = {};
         let counter = 1;
@@ -65,7 +68,6 @@ const Dashboard = () => {
                     rows[counter].push(renderMovieCard(movie));
                 }
             })
-
             return Object.values(rows).map(row => {
                 return (
                     <Row key={row[0].key}>
@@ -75,8 +77,6 @@ const Dashboard = () => {
             });
         }
     }
-
-
 
     return (
         <div className="apply-margin">
@@ -90,6 +90,7 @@ const Dashboard = () => {
                 <Col xs={12} md={6}>
                     <a>Column Size
                         <Button onClick={() => setColumnSize(3)}>3</Button>
+                        <Button onClick={() => setColumnSize(4)}>4</Button>
                         <Button onClick={() => setColumnSize(5)}>5</Button>
                         <Button onClick={() => setColumnSize(7)}>7</Button>
                         <Button onClick={() => setColumnSize(9)}>9</Button>
